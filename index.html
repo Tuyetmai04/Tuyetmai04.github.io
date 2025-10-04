@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kỷ Niệm Của Chúng Ta</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #fffaf3;
+        color: #3e2723;
+      }
+
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(to right, #ffcc80, #ffe0b2);
+        border-bottom: 3px solid #d2691e;
+      }
+
+      header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 42px;
+        margin-bottom: 10px;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        padding: 40px;
+      }
+
+      .memory {
+        background-color: #fff8e1;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        width: 300px;
+        transition: transform 0.3s;
+      }
+
+      .memory:hover {
+        transform: scale(1.05);
+      }
+
+      .memory img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .caption {
+        text-align: center;
+        padding: 10px;
+        font-weight: 600;
+      }
+
+      .note {
+        text-align: center;
+        padding: 60px 20px;
+        background-color: #ffecb3;
+      }
+
+      .note h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+      }
+
+      .note p {
+        font-size: 18px;
+        max-width: 600px;
+        margin: 10px auto 30px;
+      }
+
+      .note button {
+        background-color: #d2691e;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .note button:hover {
+        background-color: #a0522d;
+      }
+
+      footer {
+        text-align: center;
+        background-color: #6d4c41;
+        color: white;
+        padding: 15px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Kỷ Niệm Của Chúng Ta</h1>
+      <p>Những khoảnh khắc không thể quên 💖</p>
+    </header>
+
+    <section class="gallery">
+      <div class="memory">
+        <img src="img/banv.jpg" alt="Kỷ niệm 1" />
+        <div class="caption">Ngày đầu tiên gặp nhau 🌸</div>
+      </div>
+
+      <div class="memory">
+        <img src="img/dulich.jpg" alt="Kỷ niệm 2" />
+        <div class="caption">Chuyến đi đáng nhớ cùng bạn bè 🏖️</div>
+      </div>
+
+      <div class="memory">
+        <img src="img/giadinh.jpg" alt="Kỷ niệm 3" />
+        <div class="caption">Buổi lễ tốt nghiệp 🎓</div>
+      </div>
+    </section>
+
+    <section class="note">
+      <h2>Gửi đến tương lai</h2>
+      <p>
+        Dù thời gian có trôi qua, hãy luôn nhớ về những kỷ niệm này. Chúng là
+        minh chứng cho tuổi trẻ, cho niềm vui và cả những giọt nước mắt.
+      </p>
+      <button id="msgBtn">Gửi lời nhắn</button>
+    </section>
+
+    <footer>
+      <p>© 2025 Memory Project | Designed with ❤️ by You</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.getElementById("msgBtn");
+
+        btn.addEventListener("click", function () {
+          const name = prompt("Bạn muốn gửi lời nhắn đến ai?");
+          if (name) {
+            alert(`💌 Gửi đến ${name}: Dù thời gian trôi, kỷ niệm vẫn còn mãi 💖`);
+          } else {
+            alert("Bạn chưa nhập tên rồi kìa 😅");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
